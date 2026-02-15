@@ -1,0 +1,845 @@
+/***** SRCERY THEME FOR OBSIDIAN *****/
+/* https://srcery.sh                 */
+/* https://github.com/soykindabored/srcery-obsidian */
+/*                                   */
+/* 1. Palette Variables              */
+/* 2. Dark Theme                     */
+/* 3. Light Theme                    */
+/* 4. Typography                     */
+/* 5. Headings                       */
+/* 6. Links                          */
+/* 7. Tags                           */
+/* 8. Code                           */
+/* 9. Tables                         */
+/* 10. Lists & Tasks                 */
+/* 11. Embeds & Callouts             */
+/* 12. Navigation & Sidebar          */
+/* 13. Graph View                    */
+/* 14. Misc UI                       */
+/***** *****/
+
+/* ================================================================
+   1. PALETTE VARIABLES
+   ================================================================ */
+:root {
+    /* Primary */
+    --srcery-black:          #1C1B19;
+    --srcery-red:            #EF2F27;
+    --srcery-green:          #519F50;
+    --srcery-yellow:         #FBB829;
+    --srcery-blue:           #2C78BF;
+    --srcery-magenta:        #E02C6D;
+    --srcery-cyan:           #0AAEB3;
+    --srcery-white:          #BAA67F;
+
+    --srcery-bright-black:   #918175;
+    --srcery-bright-red:     #F75341;
+    --srcery-bright-green:   #98BC37;
+    --srcery-bright-yellow:  #FED06E;
+    --srcery-bright-blue:    #68A8E4;
+    --srcery-bright-magenta: #FF5C8F;
+    --srcery-bright-cyan:    #2BE4D0;
+    --srcery-bright-white:   #FCE8C3;
+
+    /* Secondary */
+    --srcery-orange:         #FF5F00;
+    --srcery-bright-orange:  #FF8700;
+    --srcery-hard-black:     #121212;
+    --srcery-teal:           #008080;
+    --srcery-xgray1:         #262626;
+    --srcery-xgray2:         #303030;
+    --srcery-xgray3:         #3A3A3A;
+    --srcery-xgray4:         #444444;
+    --srcery-xgray5:         #4E4E4E;
+    --srcery-xgray6:         #585858;
+}
+
+/* ================================================================
+   2. DARK THEME
+   ================================================================ */
+.theme-dark {
+    /* Backgrounds */
+    --background-primary:           var(--srcery-black);
+    --background-primary-alt:       var(--srcery-xgray1);
+    --background-secondary:         var(--srcery-hard-black);
+    --background-secondary-alt:     var(--srcery-xgray1);
+    --background-modifier-border:   var(--srcery-xgray3);
+    --background-modifier-form-field: var(--srcery-xgray1);
+    --background-modifier-hover:    var(--srcery-xgray2);
+    --background-modifier-active-hover: var(--srcery-xgray3);
+
+    /* Text */
+    --text-normal:        var(--srcery-bright-white);
+    --text-muted:         var(--srcery-white);
+    --text-faint:         var(--srcery-bright-black);
+    --text-on-accent:     var(--srcery-black);
+    --text-on-accent-inverted: var(--srcery-bright-white);
+    --text-error:         var(--srcery-red);
+    --text-warning:       var(--srcery-orange);
+    --text-success:       var(--srcery-green);
+
+    /* Interactive accent */
+    --interactive-accent:     var(--srcery-yellow);
+    --interactive-accent-hsl: 41, 96%, 57%;
+    --interactive-accent-hover: var(--srcery-bright-yellow);
+
+    /* Links */
+    --link-color:                 var(--srcery-bright-cyan);
+    --link-color-hover:           var(--srcery-cyan);
+    --link-decoration:            none;
+    --link-decoration-hover:      underline;
+    --link-external-color:        var(--srcery-bright-blue);
+    --link-external-color-hover:  var(--srcery-blue);
+    --link-external-decoration:   none;
+    --link-unresolved-color:      var(--srcery-bright-magenta);
+    --link-unresolved-opacity:    0.8;
+    --link-unresolved-decoration-style: dashed;
+
+    /* Headings */
+    --h1-color: var(--srcery-yellow);
+    --h2-color: var(--srcery-bright-green);
+    --h3-color: var(--srcery-bright-blue);
+    --h4-color: var(--srcery-bright-magenta);
+    --h5-color: var(--srcery-bright-cyan);
+    --h6-color: var(--srcery-bright-orange);
+
+    /* Tags */
+    --tag-color:            var(--srcery-cyan);
+    --tag-background:       rgba(10, 174, 179, 0.12);
+    --tag-background-hover: rgba(10, 174, 179, 0.22);
+    --tag-decoration:       none;
+    --tag-padding-x:        6px;
+    --tag-padding-y:        1px;
+    --tag-radius:           2px;
+
+    /* Code */
+    --code-normal:     var(--srcery-bright-orange);
+    --code-background: var(--srcery-xgray1);
+    --code-comment:    var(--srcery-bright-black);
+    --code-function:   var(--srcery-bright-green);
+    --code-keyword:    var(--srcery-red);
+    --code-operator:   var(--srcery-cyan);
+    --code-property:   var(--srcery-bright-yellow);
+    --code-punctuation: var(--srcery-white);
+    --code-string:     var(--srcery-bright-cyan);
+    --code-tag:        var(--srcery-blue);
+    --code-value:      var(--srcery-bright-magenta);
+    --code-important:  var(--srcery-orange);
+
+    /* Inline code */
+    --inline-title-color: var(--srcery-yellow);
+
+    /* Highlights & Selections */
+    --text-highlight-bg:         rgba(251, 184, 41, 0.25);
+    --text-selection:            rgba(43, 228, 208, 0.18);
+    --flashing-background:       rgba(251, 184, 41, 0.35);
+
+    /* Navigation */
+    --nav-item-color:            var(--srcery-white);
+    --nav-item-color-hover:      var(--srcery-bright-white);
+    --nav-item-color-active:     var(--srcery-bright-cyan);
+    --nav-item-background-hover: var(--srcery-xgray2);
+    --nav-item-background-active: var(--srcery-xgray2);
+    --nav-indentation-guide-color: var(--srcery-xgray4);
+
+    /* Toggle / checkbox */
+    --toggle-thumb-color:      var(--srcery-xgray5);
+    --toggle-border-width:     1px;
+    --checkbox-color:          var(--srcery-yellow);
+    --checkbox-color-hover:    var(--srcery-bright-yellow);
+    --checkbox-border-color:   var(--srcery-yellow);
+    --checkbox-border-color-hover: var(--srcery-bright-yellow);
+    --checklist-done-color:    var(--srcery-bright-black);
+    --checklist-done-decoration: line-through;
+
+    /* Graph */
+    --graph-line:    var(--srcery-xgray4);
+    --graph-node:    var(--srcery-bright-cyan);
+    --graph-node-focused: var(--srcery-yellow);
+    --graph-node-tag: var(--srcery-magenta);
+    --graph-node-attachment: var(--srcery-bright-green);
+    --graph-node-unresolved: var(--srcery-bright-black);
+
+    /* Divider / hr */
+    --hr-color: var(--srcery-xgray4);
+
+    /* Blockquote */
+    --blockquote-border-color: var(--srcery-bright-black);
+
+    /* Bold & Italic */
+    --bold-color:   var(--srcery-bright-yellow);
+    --italic-color: var(--srcery-bright-magenta);
+
+    /* Scrollbar */
+    --scrollbar-bg:            var(--srcery-hard-black);
+    --scrollbar-thumb-bg:      var(--srcery-xgray4);
+    --scrollbar-active-thumb-bg: var(--srcery-xgray6);
+
+    /* Tab */
+    --tab-text-color:           var(--srcery-white);
+    --tab-text-color-active:    var(--srcery-bright-white);
+    --tab-text-color-focused:   var(--srcery-bright-white);
+    --tab-text-color-focused-active: var(--srcery-bright-white);
+    --tab-background-active:    var(--srcery-black);
+
+    /* Titlebar */
+    --titlebar-background:       var(--srcery-hard-black);
+    --titlebar-background-focused: var(--srcery-hard-black);
+
+    /* Indentation guide */
+    --indentation-guide-color:        var(--srcery-xgray3);
+    --indentation-guide-color-active: var(--srcery-cyan);
+
+    /* Cursor (vim mode) */
+    --cursor:  var(--srcery-yellow);
+
+    /* Callout colors */
+    --callout-info:    var(--srcery-bright-blue);
+    --callout-todo:    var(--srcery-bright-blue);
+    --callout-tip:     var(--srcery-bright-cyan);
+    --callout-success: var(--srcery-bright-green);
+    --callout-warning: var(--srcery-bright-orange);
+    --callout-error:   var(--srcery-bright-red);
+    --callout-bug:     var(--srcery-red);
+    --callout-example: var(--srcery-bright-magenta);
+    --callout-quote:   var(--srcery-white);
+}
+
+/* ================================================================
+   3. LIGHT THEME
+   ================================================================ */
+.theme-light {
+    /* Backgrounds */
+    --background-primary:           var(--srcery-bright-white);
+    --background-primary-alt:       #F0DEB4;
+    --background-secondary:         #E8D5A8;
+    --background-secondary-alt:     #F0DEB4;
+    --background-modifier-border:   #D5C294;
+    --background-modifier-form-field: #F0DEB4;
+    --background-modifier-hover:    #E0CDA0;
+    --background-modifier-active-hover: #D5C294;
+
+    /* Text */
+    --text-normal:        var(--srcery-black);
+    --text-muted:         var(--srcery-xgray6);
+    --text-faint:         var(--srcery-bright-black);
+    --text-on-accent:     var(--srcery-bright-white);
+    --text-on-accent-inverted: var(--srcery-black);
+    --text-error:         var(--srcery-red);
+    --text-warning:       var(--srcery-orange);
+    --text-success:       var(--srcery-green);
+
+    /* Interactive */
+    --interactive-accent:       var(--srcery-blue);
+    --interactive-accent-hsl:   209, 63%, 46%;
+    --interactive-accent-hover: var(--srcery-bright-blue);
+
+    /* Links */
+    --link-color:                 var(--srcery-blue);
+    --link-color-hover:           var(--srcery-bright-blue);
+    --link-decoration:            none;
+    --link-decoration-hover:      underline;
+    --link-external-color:        var(--srcery-teal);
+    --link-external-color-hover:  var(--srcery-cyan);
+    --link-external-decoration:   none;
+    --link-unresolved-color:      var(--srcery-magenta);
+    --link-unresolved-opacity:    0.8;
+    --link-unresolved-decoration-style: dashed;
+
+    /* Headings */
+    --h1-color: var(--srcery-red);
+    --h2-color: var(--srcery-green);
+    --h3-color: var(--srcery-blue);
+    --h4-color: var(--srcery-magenta);
+    --h5-color: var(--srcery-teal);
+    --h6-color: var(--srcery-orange);
+
+    /* Tags */
+    --tag-color:            var(--srcery-teal);
+    --tag-background:       rgba(0, 128, 128, 0.1);
+    --tag-background-hover: rgba(0, 128, 128, 0.2);
+    --tag-decoration:       none;
+    --tag-padding-x:        6px;
+    --tag-padding-y:        1px;
+    --tag-radius:           2px;
+
+    /* Code */
+    --code-normal:     var(--srcery-red);
+    --code-background: #F0DEB4;
+    --code-comment:    var(--srcery-bright-black);
+    --code-function:   var(--srcery-green);
+    --code-keyword:    var(--srcery-magenta);
+    --code-operator:   var(--srcery-teal);
+    --code-property:   var(--srcery-orange);
+    --code-punctuation: var(--srcery-xgray6);
+    --code-string:     var(--srcery-blue);
+    --code-tag:        var(--srcery-red);
+    --code-value:      var(--srcery-magenta);
+    --code-important:  var(--srcery-orange);
+
+    /* Inline title */
+    --inline-title-color: var(--srcery-red);
+
+    /* Highlights & Selections */
+    --text-highlight-bg:  rgba(81, 159, 80, 0.25);
+    --text-selection:     rgba(186, 166, 127, 0.5);
+
+    /* Navigation */
+    --nav-item-color:            var(--srcery-xgray6);
+    --nav-item-color-hover:      var(--srcery-black);
+    --nav-item-color-active:     var(--srcery-blue);
+    --nav-item-background-hover: #E0CDA0;
+    --nav-item-background-active: #D5C294;
+    --nav-indentation-guide-color: #C8B688;
+
+    /* Toggle / checkbox */
+    --toggle-thumb-color:      #D5C294;
+    --toggle-border-width:     1px;
+    --checkbox-color:        var(--srcery-blue);
+    --checkbox-color-hover:  var(--srcery-bright-blue);
+    --checkbox-border-color: var(--srcery-blue);
+    --checkbox-border-color-hover: var(--srcery-bright-blue);
+    --checklist-done-color:  var(--srcery-bright-black);
+    --checklist-done-decoration: line-through;
+
+    /* Graph */
+    --graph-line:    #C8B688;
+    --graph-node:    var(--srcery-blue);
+    --graph-node-focused: var(--srcery-red);
+    --graph-node-tag: var(--srcery-magenta);
+    --graph-node-attachment: var(--srcery-green);
+    --graph-node-unresolved: var(--srcery-bright-black);
+
+    /* Divider */
+    --hr-color: #D5C294;
+
+    /* Blockquote */
+    --blockquote-border-color: #C8B688;
+
+    /* Bold & Italic */
+    --bold-color:   var(--srcery-orange);
+    --italic-color: var(--srcery-magenta);
+
+    /* Scrollbar */
+    --scrollbar-bg:              #E8D5A8;
+    --scrollbar-thumb-bg:        #C8B688;
+    --scrollbar-active-thumb-bg: #BAA67F;
+
+    /* Tab */
+    --tab-text-color:           var(--srcery-xgray6);
+    --tab-text-color-active:    var(--srcery-black);
+    --tab-background-active:    var(--srcery-bright-white);
+
+    /* Titlebar */
+    --titlebar-background:        #E8D5A8;
+    --titlebar-background-focused: #E8D5A8;
+
+    /* Indentation guide */
+    --indentation-guide-color:        #D5C294;
+    --indentation-guide-color-active: var(--srcery-teal);
+
+    /* Cursor */
+    --cursor: var(--srcery-blue);
+
+    /* Callout colors */
+    --callout-info:    var(--srcery-blue);
+    --callout-todo:    var(--srcery-blue);
+    --callout-tip:     var(--srcery-teal);
+    --callout-success: var(--srcery-green);
+    --callout-warning: var(--srcery-orange);
+    --callout-error:   var(--srcery-red);
+    --callout-bug:     var(--srcery-red);
+    --callout-example: var(--srcery-magenta);
+    --callout-quote:   var(--srcery-bright-black);
+}
+
+/* ================================================================
+   4. TYPOGRAPHY
+   ================================================================ */
+body {
+    --font-monospace: "Hack Nerd Font", "Source Code Pro", monospace;
+    -webkit-font-smoothing: auto;
+}
+
+/* ================================================================
+   5. HEADINGS
+   ================================================================ */
+.cm-header-1, .markdown-rendered h1 { font-weight: 600; }
+.cm-header-2, .markdown-rendered h2 { font-weight: 600; }
+.cm-header-3, .markdown-rendered h3 { font-weight: 500; }
+.cm-header-4, .markdown-rendered h4 { font-weight: 500; }
+.cm-header-5, .markdown-rendered h5 { font-weight: 500; }
+.cm-header-6, .markdown-rendered h6 { font-weight: 500; }
+
+/* ================================================================
+   6. LINKS
+   Diverse colors: internal=bright-cyan, external=bright-blue,
+   unresolved=bright-magenta
+   ================================================================ */
+
+/* Internal links (wikilinks) */
+.theme-dark .cm-hmd-internal-link,
+.theme-dark .internal-link {
+    color: var(--srcery-bright-cyan);
+    text-decoration: none;
+}
+.theme-dark .cm-hmd-internal-link:hover,
+.theme-dark .internal-link:hover {
+    color: var(--srcery-cyan);
+    text-decoration: underline;
+}
+
+/* External links */
+.theme-dark a.external-link,
+.theme-dark .cm-url,
+.theme-dark .cm-link {
+    color: var(--srcery-bright-blue);
+}
+.theme-dark a.external-link:hover {
+    color: var(--srcery-blue);
+}
+
+/* Unresolved links */
+.theme-dark .is-unresolved,
+.theme-dark .internal-link.is-unresolved {
+    color: var(--srcery-bright-magenta);
+    opacity: 0.8;
+}
+
+/* Light theme links */
+.theme-light .cm-hmd-internal-link,
+.theme-light .internal-link {
+    color: var(--srcery-blue);
+    text-decoration: none;
+}
+.theme-light .cm-hmd-internal-link:hover,
+.theme-light .internal-link:hover {
+    color: var(--srcery-bright-blue);
+    text-decoration: underline;
+}
+
+.theme-light a.external-link,
+.theme-light .cm-url,
+.theme-light .cm-link {
+    color: var(--srcery-teal);
+}
+.theme-light a.external-link:hover {
+    color: var(--srcery-cyan);
+}
+
+.theme-light .is-unresolved,
+.theme-light .internal-link.is-unresolved {
+    color: var(--srcery-magenta);
+    opacity: 0.8;
+}
+
+/* ================================================================
+   7. TAGS
+   ================================================================ */
+.tag {
+    font-weight: 500;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+/* ================================================================
+   8. CODE
+   ================================================================ */
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+    text-shadow: none;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+    line-height: 1.4em;
+}
+
+/* ================================================================
+   9. TABLES
+   ================================================================ */
+th {
+    font-weight: 600;
+}
+
+thead {
+    border-bottom: 2px solid var(--background-modifier-border);
+}
+
+/* ================================================================
+   10. LISTS & TASKS
+   ================================================================ */
+input.task-list-item-checkbox {
+    border: 1px solid var(--checkbox-border-color);
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input.task-list-item-checkbox:checked {
+    background-color: var(--checkbox-color);
+    box-shadow: inset 0 0 0 2px var(--background-primary);
+}
+
+/* Indent guides */
+.markdown-source-view.mod-cm6 .cm-indent::before,
+.markdown-rendered.show-indentation-guide li > ul::before,
+.markdown-rendered.show-indentation-guide li > ol::before {
+    border-right-color: var(--indentation-guide-color);
+}
+
+/* ================================================================
+   11. EMBEDS & CALLOUTS
+   ================================================================ */
+.markdown-embed-title {
+    font-weight: 600;
+}
+
+.markdown-embed {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* ================================================================
+   12. NAVIGATION & SIDEBAR
+   ================================================================ */
+.view-header-title {
+    font-weight: 700;
+}
+
+.workspace-leaf-header-title {
+    font-weight: 600;
+}
+
+.nav-file-title {
+    border-radius: 0;
+}
+
+/* Resize handles */
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    width: 1px;
+    background-color: var(--srcery-cyan);
+}
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+    height: 1px;
+    background-color: var(--srcery-cyan);
+}
+
+/* ================================================================
+   13. GRAPH VIEW
+   ================================================================ */
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight {
+    color: var(--interactive-accent-hsl);
+}
+
+.graph-view.color-text {
+    color: var(--text-normal);
+}
+
+/* ================================================================
+   14. MISC UI
+   ================================================================ */
+::selection {
+    background-color: var(--text-selection);
+}
+
+strong {
+    font-weight: 600;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.suggestion-item.is-selected {
+    background-color: var(--text-selection);
+}
+
+/* Status bar */
+.status-bar {
+    font-size: 12px;
+}
+
+/* Hide frontmatter */
+.frontmatter-container {
+    display: none;
+}
+
+/* CTA buttons */
+.mod-cta {
+    color: var(--text-on-accent);
+    font-weight: 600;
+}
+
+/* ================================================================
+   DARK THEME: Settings toggles & sliders
+   Toggle track=xgray4, thumb=xgray6 | enabled: track=yellow, thumb=xgray2
+   Slider track=xgray3, thumb=cyan
+   ================================================================ */
+.theme-dark .checkbox-container {
+    background-color: var(--srcery-xgray4);
+}
+.theme-dark .checkbox-container::after {
+    background-color: var(--srcery-xgray6);
+}
+.theme-dark .checkbox-container.is-enabled {
+    background-color: var(--srcery-yellow);
+}
+.theme-dark .checkbox-container.is-enabled::after {
+    background-color: var(--srcery-xgray2);
+}
+
+.theme-dark input[type="range"] {
+    background-color: var(--srcery-xgray3);
+}
+.theme-dark input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--srcery-cyan);
+    border: none;
+}
+.theme-dark input[type="range"]::-moz-range-thumb {
+    background-color: var(--srcery-cyan);
+    border: none;
+}
+
+/* ================================================================
+   LIGHT THEME: Settings toggles & sliders
+   Toggle track=bg4 beige, thumb=bg5 beige | enabled: track=green, thumb=bright-white
+   Slider track=bg3 beige, thumb=blue
+   ================================================================ */
+.theme-light .checkbox-container {
+    background-color: #C8B688;
+}
+.theme-light .checkbox-container::after {
+    background-color: #E0CDA0;
+}
+.theme-light .checkbox-container.is-enabled {
+    background-color: var(--srcery-green);
+}
+.theme-light .checkbox-container.is-enabled::after {
+    background-color: var(--srcery-bright-white);
+}
+
+.theme-light input[type="range"] {
+    background-color: #D5C294;
+}
+.theme-light input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--srcery-blue);
+    border: none;
+}
+.theme-light input[type="range"]::-moz-range-thumb {
+    background-color: var(--srcery-blue);
+    border: none;
+}
+
+/* ================================================================
+   LIGHT THEME: Kill all default whites in settings & UI
+   ================================================================ */
+.theme-light .modal-container .modal,
+.theme-light .modal-bg {
+    background-color: var(--srcery-bright-white);
+}
+
+.theme-light .setting-item {
+    border-color: #D5C294;
+}
+
+.theme-light .vertical-tab-header {
+    background-color: #E8D5A8;
+}
+
+.theme-light .vertical-tab-header-group-title {
+    color: var(--srcery-bright-black);
+}
+
+.theme-light .vertical-tab-nav-item {
+    color: var(--srcery-xgray6);
+    background-color: transparent;
+}
+.theme-light .vertical-tab-nav-item:hover {
+    background-color: #E0CDA0;
+    color: var(--srcery-black);
+}
+.theme-light .vertical-tab-nav-item.is-active {
+    background-color: #D5C294;
+    color: var(--srcery-black);
+}
+
+.theme-light .vertical-tab-content-container {
+    background-color: var(--srcery-bright-white);
+}
+
+.theme-light .vertical-tab-content {
+    background-color: var(--srcery-bright-white);
+}
+
+.theme-light input[type="text"],
+.theme-light input[type="search"],
+.theme-light input[type="email"],
+.theme-light input[type="password"],
+.theme-light input[type="number"],
+.theme-light textarea {
+    background-color: #F0DEB4;
+    border-color: #D5C294;
+    color: var(--srcery-black);
+}
+
+.theme-light select,
+.theme-light .dropdown {
+    background-color: #F0DEB4;
+    border-color: #D5C294;
+    color: var(--srcery-black);
+}
+
+.theme-light button {
+    background-color: #E8D5A8;
+    color: var(--srcery-black);
+}
+.theme-light button:hover {
+    background-color: #D5C294;
+}
+
+.theme-light .mod-cta {
+    background-color: var(--srcery-blue);
+    color: var(--srcery-bright-white);
+}
+.theme-light .mod-cta:hover {
+    background-color: var(--srcery-bright-blue);
+}
+
+.theme-light .mod-warning {
+    background-color: var(--srcery-red);
+    color: var(--srcery-bright-white);
+}
+
+.theme-light .search-input-container input,
+.theme-light .prompt-input {
+    background-color: #F0DEB4;
+    border-color: #D5C294;
+}
+
+.theme-light .modal {
+    background-color: var(--srcery-bright-white);
+    border-color: #D5C294;
+}
+
+.theme-light .prompt {
+    background-color: var(--srcery-bright-white);
+    border-color: #D5C294;
+}
+
+.theme-light .suggestion-container {
+    background-color: var(--srcery-bright-white);
+}
+
+.theme-light .suggestion-item.is-selected {
+    background-color: #E0CDA0;
+}
+
+.theme-light .menu {
+    background-color: var(--srcery-bright-white);
+    border-color: #D5C294;
+}
+
+.theme-light .menu-item:hover {
+    background-color: #E0CDA0;
+}
+
+.theme-light .tooltip {
+    background-color: #E8D5A8;
+    color: var(--srcery-black);
+}
+
+.theme-light .status-bar {
+    background-color: #E8D5A8;
+    color: var(--srcery-xgray6);
+}
+
+/* Dark theme: also ensure settings have no white leaks */
+.theme-dark .modal-container .modal,
+.theme-dark .modal {
+    background-color: var(--srcery-black);
+    border-color: var(--srcery-xgray3);
+}
+
+.theme-dark .vertical-tab-header {
+    background-color: var(--srcery-hard-black);
+}
+
+.theme-dark .vertical-tab-nav-item {
+    color: var(--srcery-white);
+}
+.theme-dark .vertical-tab-nav-item:hover {
+    background-color: var(--srcery-xgray2);
+    color: var(--srcery-bright-white);
+}
+.theme-dark .vertical-tab-nav-item.is-active {
+    background-color: var(--srcery-xgray3);
+    color: var(--srcery-bright-white);
+}
+
+.theme-dark .vertical-tab-content-container,
+.theme-dark .vertical-tab-content {
+    background-color: var(--srcery-black);
+}
+
+.theme-dark input[type="text"],
+.theme-dark input[type="search"],
+.theme-dark input[type="email"],
+.theme-dark input[type="password"],
+.theme-dark input[type="number"],
+.theme-dark textarea {
+    background-color: var(--srcery-xgray1);
+    border-color: var(--srcery-xgray3);
+    color: var(--srcery-bright-white);
+}
+
+.theme-dark select,
+.theme-dark .dropdown {
+    background-color: var(--srcery-xgray1);
+    border-color: var(--srcery-xgray3);
+    color: var(--srcery-bright-white);
+}
+
+.theme-dark .prompt {
+    background-color: var(--srcery-black);
+    border-color: var(--srcery-xgray3);
+}
+
+.theme-dark .suggestion-container {
+    background-color: var(--srcery-black);
+}
+
+.theme-dark .menu {
+    background-color: var(--srcery-black);
+    border-color: var(--srcery-xgray3);
+}
+
+.theme-dark .menu-item:hover {
+    background-color: var(--srcery-xgray2);
+}
+
+.theme-dark .tooltip {
+    background-color: var(--srcery-xgray2);
+    color: var(--srcery-bright-white);
+}
+
+/* Vim cursor */
+.cm-fat-cursor .cm-cursor {
+    background-color: var(--cursor);
+    opacity: 0.6;
+}
+
+/* Markdown formatting tokens in source mode */
+.cm-formatting {
+    font-family: var(--font-monospace);
+}
