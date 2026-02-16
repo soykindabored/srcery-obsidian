@@ -14,14 +14,37 @@
   </a>
 </p>
 
-<h2 align="center">[THEME NAME]</h2>
+<h2 align="center">Srcery</h2>
 
 <p align="center">
-[THEME DESCRIPTION]
+	Srcery is a color scheme with clearly defined contrasting colors and a slightly earthy tone.
 </p>
 
 
 ## Requirements
-## Installation
-## Screenshots
+- [Obsidian](https://obsidian.md/) v1.1.9 or above
 
+## Installation
+
+### Manual
+
+1. Clone the repo:
+   ```sh
+   git clone git@github.com:srcery-colors/srcery-obsidian.git
+   ```
+
+2. Copy `manifest.json` and `theme.css` into your vault's theme directory:
+   ```sh
+   mkdir -p /path/to/vault/.obsidian/themes/srcery-obsidian
+   cp manifest.json theme.css /path/to/vault/.obsidian/themes/srcery-obsidian/
+   ```
+
+   **Or** symlink the repo directly if you want to stay up to date with `git pull`:
+   ```sh
+   ln -s /path/to/srcery-obsidian /path/to/vault/.obsidian/themes/srcery-obsidian
+   ```
+
+3. In Obsidian, go to **Settings → Appearance → Themes** and select **srcery-obsidian**.
+
+## Screenshots
+Coming soon
