@@ -14,14 +14,89 @@
   </a>
 </p>
 
-<h2 align="center">[THEME NAME]</h2>
+<h2 align="center">Srcery</h2>
 
 <p align="center">
-[THEME DESCRIPTION]
+	Srcery is a color scheme with clearly defined contrasting colors and a slightly earthy tone.
 </p>
 
 
 ## Requirements
+- [Obsidian](https://obsidian.md/) v1.1.9 or above
+
 ## Installation
+
+### Manual
+
+1. Clone the repo:
+   ```sh
+   git clone git@github.com:soykindabored/srcery-obsidian.git
+   ```
+   Or from the [srcery-colors](https://github.com/srcery-colors/srcery-obsidian) community managed repo:
+   ```sh
+   git clone git@github.com:srcery-colors/srcery-obsidian.git
+   ```
+
+2. Copy `manifest.json` and `theme.css` into your vault's theme directory:
+   ```sh
+   mkdir -p /path/to/vault/.obsidian/themes/srcery-obsidian
+   cp manifest.json theme.css /path/to/vault/.obsidian/themes/srcery-obsidian/
+   ```
+
+   **Or** symlink the repo directly if you want to stay up to date with `git pull`:
+   ```sh
+   ln -s /path/to/srcery-obsidian /path/to/vault/.obsidian/themes/
+   ```
+   Note that you have to make themes/ directory in each vault's .obsidian unless you've already chosen a marketplace theme.
+
+3. In Obsidian, go to **Settings → Appearance → Themes** and select **srcery-obsidian**.
+
+## Palette
+
+All colors sourced from the official [srcery-palette](https://www.npmjs.com/package/@srcery-colors/srcery-palette).
+
+### Primary
+
+| Name | Hex |
+|------|-----|
+| Black | `#1C1B19` |
+| Red | `#EF2F27` |
+| Green | `#519F50` |
+| Yellow | `#FBB829` |
+| Blue | `#2C78BF` |
+| Magenta | `#E02C6D` |
+| Cyan | `#0AAEB3` |
+| White | `#BAA67F` |
+| Bright Black | `#918175` |
+| Bright Red | `#F75341` |
+| Bright Green | `#98BC37` |
+| Bright Yellow | `#FED06E` |
+| Bright Blue | `#68A8E4` |
+| Bright Magenta | `#FF5C8F` |
+| Bright Cyan | `#2BE4D0` |
+| Bright White | `#FCE8C3` |
+
+### Secondary
+
+| Name | Hex |
+|------|-----|
+| Orange | `#FF5F00` |
+| Bright Orange | `#FF8700` |
+| Hard Black | `#121212` |
+| Teal | `#008080` |
+| XGray1 | `#262626` |
+| XGray2 | `#303030` |
+| XGray3 | `#3A3A3A` |
+| XGray4 | `#444444` |
+| XGray5 | `#4E4E4E` |
+| XGray6 | `#585858` |
+| XGray7 | `#626262` |
+| XGray8 | `#6C6C6C` |
+| XGray9 | `#767676` |
+| XGray10 | `#808080` |
+| XGray11 | `#8A8A8A` |
+| XGray12 | `#949494` |
+
 ## Screenshots
 
+![srcery-obsidian](assets/srcery-screenshot-1.png)
