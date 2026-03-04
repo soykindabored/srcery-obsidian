@@ -420,11 +420,6 @@ input.task-list-item-checkbox:checked {
 .side-dock-ribbon-action:nth-child(14n+13):hover svg { color: var(--srcery-bright-cyan); }
 .side-dock-ribbon-action:nth-child(14n+14):hover svg { color: var(--srcery-bright-orange); }
 
-/* Command palette — orange on hover */
-div.side-dock-ribbon-action[aria-label="Open command palette"]:hover svg {
-    color: var(--srcery-orange);
-}
-
 .view-header-title {
     font-weight: 700;
 }
@@ -441,9 +436,11 @@ div.side-dock-ribbon-action[aria-label="Open command palette"]:hover svg {
     color: var(--srcery-green);
 }
 
-.nav-file-title-content[contenteditable],
-.inline-title[contenteditable] {
+.nav-file-title-content[contenteditable] {
     background-color: var(--srcery-xgray2);
+}
+.inline-title[contenteditable] {
+    background-color: transparent;
 }
 
 /* Resize handles */
