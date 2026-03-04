@@ -420,6 +420,37 @@ input.task-list-item-checkbox:checked {
 .side-dock-ribbon-action:nth-child(14n+13):hover svg { color: var(--srcery-bright-cyan); }
 .side-dock-ribbon-action:nth-child(14n+14):hover svg { color: var(--srcery-bright-orange); }
 
+/* File explorer action buttons cycle hover, stick active */
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+1):is(:hover, .is-active),
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+1):is(:hover, .is-active) svg { color: var(--srcery-yellow); }
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+2):is(:hover, .is-active),
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+2):is(:hover, .is-active) svg { color: var(--srcery-red); }
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+3):is(:hover, .is-active),
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+3):is(:hover, .is-active) svg { color: var(--srcery-green); }
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+4):is(:hover, .is-active),
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+4):is(:hover, .is-active) svg { color: var(--srcery-blue); }
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+5):is(:hover, .is-active),
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container > .nav-action-button:nth-child(5n+5):is(:hover, .is-active) svg { color: var(--srcery-magenta); }
+
+/* Bottom-left vault switcher, help, and settings use fixed cycle slots */
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher:is(:hover, .has-active-menu),
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher:is(:hover, .has-active-menu) .workspace-drawer-vault-name,
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher:is(:hover, .has-active-menu) .workspace-drawer-vault-switcher-icon { color: var(--srcery-yellow); }
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions > .clickable-icon:nth-child(2n+1):is(:hover, .is-active),
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions > .clickable-icon:nth-child(2n+1):is(:hover, .is-active) svg { color: var(--srcery-red); }
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions > .clickable-icon:nth-child(2n+2):is(:hover, .is-active),
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions > .clickable-icon:nth-child(2n+2):is(:hover, .is-active) svg { color: var(--srcery-green); }
+
+/* Right sidebar pane action buttons */
+.workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+1):is(:hover, .is-active),
+.workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+1):is(:hover, .is-active) svg { color: var(--srcery-yellow); }
+.workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+2):is(:hover, .is-active),
+.workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+2):is(:hover, .is-active) svg { color: var(--srcery-red); }
+.workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+3):is(:hover, .is-active),
+.workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+3):is(:hover, .is-active) svg { color: var(--srcery-green); }
+.workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+4):is(:hover, .is-active),
+.workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+4):is(:hover, .is-active) svg { color: var(--srcery-blue); }
+
 .view-header-title {
     font-weight: 700;
 }

@@ -46,8 +46,7 @@
    **Or** symlink the files if you want to stay up to date with `git pull`:
    ```sh
    mkdir -p /path/to/vault/.obsidian/themes/Srcery
-   ln -s /path/to/srcery-obsidian/manifest.json /path/to/vault/.obsidian/themes/Srcery/
-   ln -s /path/to/srcery-obsidian/theme.css /path/to/vault/.obsidian/themes/Srcery/
+   ln -s /path/to/srcery-obsidian/{manifest.json,theme.css} /path/to/vault/.obsidian/themes/Srcery/
    ```
    Note that you have to create the `themes/` directory in each vault's `.obsidian/` unless you've already installed a theme from the marketplace.
 
