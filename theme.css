@@ -1,22 +1,23 @@
 /***** SRCERY THEME FOR OBSIDIAN *****/
-/* https://srcery.sh                 */
+/* https://srcery.sh */
 /* https://github.com/srcery-colors/srcery-obsidian */
 /* By https://github.com/soykindabored */
-/* Dark-only theme — srcery has no   */
-/* official light mode in any editor */
-/*                                   */ /* 1. Palette Variables (body)        */
-/* 2. Theme Overrides (.theme-dark)  */
-/* 3. Headings                       */
-/* 4. Links                          */
-/* 5. Tags                           */
-/* 6. Code                           */
-/* 7. Tables                         */
-/* 8. Lists & Tasks                  */
-/* 9. Embeds & Callouts              */
-/* 10. Navigation & Sidebar          */
-/* 11. Graph View                    */
-/* 12. Misc UI                       */
-/***** *****/
+/* Dark-only theme: Srcery has no official light mode in any editor */
+/*
+ * Section Index
+ * 1. Palette Variables (body)
+ * 2. Theme Overrides (.theme-dark)
+ * 3. Headings
+ * 4. Links
+ * 5. Tags
+ * 6. Code
+ * 7. Tables
+ * 8. Lists & Tasks
+ * 9. Embeds & Callouts
+ * 10. Navigation & Sidebar
+ * 11. Graph View
+ * 12. Misc UI
+ */
 
 /* ================================================================
    1. PALETTE VARIABLES
@@ -440,7 +441,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions > .clickable-icon:nth-child(2n+2):is(:hover, .is-active),
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions > .clickable-icon:nth-child(2n+2):is(:hover, .is-active) svg { color: var(--srcery-green); }
 
-/* Right sidebar pane action buttons */
+/* Right sidebar pane action buttons (Tags pane) */
 .workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+1):is(:hover, .is-active),
 .workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+1):is(:hover, .is-active) svg { color: var(--srcery-yellow); }
 .workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+2):is(:hover, .is-active),
@@ -449,6 +450,14 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+3):is(:hover, .is-active) svg { color: var(--srcery-green); }
 .workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+4):is(:hover, .is-active),
 .workspace-leaf-content[data-type='tag'] .nav-buttons-container > .nav-action-button:nth-child(4n+4):is(:hover, .is-active) svg { color: var(--srcery-blue); }
+
+/* Right sidebar pane action buttons (Outline pane) */
+.workspace-leaf-content[data-type='outline'] .nav-buttons-container > .nav-action-button:nth-child(3n+1):is(:hover, .is-active, .has-active-menu),
+.workspace-leaf-content[data-type='outline'] .nav-buttons-container > .nav-action-button:nth-child(3n+1):is(:hover, .is-active, .has-active-menu) svg { color: var(--srcery-yellow); }
+.workspace-leaf-content[data-type='outline'] .nav-buttons-container > .nav-action-button:nth-child(3n+2):is(:hover, .is-active, .has-active-menu),
+.workspace-leaf-content[data-type='outline'] .nav-buttons-container > .nav-action-button:nth-child(3n+2):is(:hover, .is-active, .has-active-menu) svg { color: var(--srcery-red); }
+.workspace-leaf-content[data-type='outline'] .nav-buttons-container > .nav-action-button:nth-child(3n+3):is(:hover, .is-active, .has-active-menu),
+.workspace-leaf-content[data-type='outline'] .nav-buttons-container > .nav-action-button:nth-child(3n+3):is(:hover, .is-active, .has-active-menu) svg { color: var(--srcery-green); }
 
 /* Markdown note header action buttons */
 .workspace-leaf-content[data-type='markdown'] .view-actions > .view-action:nth-child(3n+1):is(:hover, .is-active, .has-active-menu),
@@ -523,13 +532,21 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     mask-position: center;
 }
 
-/* File explorer file-type colors (type-based cycle) */
+/* File explorer filetype icons and colors */
 .workspace-leaf-content[data-type='file-explorer'] .nav-file-title {
     --srcery-filetype-color: var(--srcery-white);
     --srcery-filetype-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpath d='M14 2v6h6'/%3E%3C/svg%3E");
 }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".md" i] { --srcery-filetype-color: var(--srcery-yellow); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".pdf" i] { --srcery-filetype-color: var(--srcery-red); }
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".md" i] {
+    --srcery-filetype-color: var(--srcery-yellow);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".pdf" i] {
+    --srcery-filetype-color: var(--srcery-red);
+}
+
+/* Base uses explicit database icon render path */
 .workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".base" i] {
     --srcery-filetype-color: var(--srcery-green);
     --srcery-filetype-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='12' cy='5' rx='9' ry='3'/%3E%3Cpath d='M3 5v14a9 3 0 0 0 18 0V5'/%3E%3Cpath d='M3 12a9 3 0 0 0 18 0'/%3E%3C/svg%3E");
@@ -563,6 +580,8 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     --srcery-filetype-color: var(--srcery-bright-yellow);
     --srcery-filetype-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Cpath d='M3 9h18'/%3E%3Cpath d='M9 9v12'/%3E%3C/svg%3E");
 }
+
+/* Video files use explicit clapperboard icon render path */
 .workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".mp4" i], [data-path$=".mov" i], [data-path$=".mkv" i], [data-path$=".webm" i], [data-path$=".avi" i], [data-path$=".m4v" i], [data-path$=".wmv" i], [data-path$=".mpg" i], [data-path$=".mpeg" i], [data-path$=".flv" i], [data-path$=".3gp" i]) {
     --srcery-filetype-color: var(--srcery-blue);
     --srcery-filetype-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z'/%3E%3Cpath d='m6.2 5.3 3.1 3.9'/%3E%3Cpath d='m12.4 3.4 3.1 4'/%3E%3Cpath d='M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z'/%3E%3C/svg%3E");
@@ -592,25 +611,62 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     -webkit-mask-position: center;
     mask-position: center;
 }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".png" i], [data-path$=".jpg" i], [data-path$=".jpeg" i], [data-path$=".gif" i], [data-path$=".webp" i], [data-path$=".svg" i], [data-path$=".avif" i], [data-path$=".bmp" i], [data-path$=".tiff" i], [data-path$=".tif" i], [data-path$=".heic" i], [data-path$=".heif" i], [data-path$=".ico" i]) { --srcery-filetype-color: var(--srcery-magenta); }
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".png" i], [data-path$=".jpg" i], [data-path$=".jpeg" i], [data-path$=".gif" i], [data-path$=".webp" i], [data-path$=".svg" i], [data-path$=".avif" i], [data-path$=".bmp" i], [data-path$=".tiff" i], [data-path$=".tif" i], [data-path$=".heic" i], [data-path$=".heif" i], [data-path$=".ico" i]) {
+    --srcery-filetype-color: var(--srcery-magenta);
+}
+
 .workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".png" i], [data-path$=".jpg" i], [data-path$=".jpeg" i], [data-path$=".gif" i], [data-path$=".webp" i], [data-path$=".svg" i], [data-path$=".avif" i], [data-path$=".bmp" i], [data-path$=".tiff" i], [data-path$=".tif" i], [data-path$=".heic" i], [data-path$=".heif" i], [data-path$=".ico" i]) {
     --srcery-filetype-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='M21 15l-5-5L5 21'/%3E%3C/svg%3E");
 }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".excalidraw" i] { --srcery-filetype-color: var(--srcery-cyan); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".mp3" i], [data-path$=".m4a" i], [data-path$=".wav" i], [data-path$=".flac" i], [data-path$=".ogg" i], [data-path$=".aac" i]) { --srcery-filetype-color: var(--srcery-orange); }
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".excalidraw" i] {
+    --srcery-filetype-color: var(--srcery-cyan);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".mp3" i], [data-path$=".m4a" i], [data-path$=".wav" i], [data-path$=".flac" i], [data-path$=".ogg" i], [data-path$=".aac" i]) {
+    --srcery-filetype-color: var(--srcery-orange);
+}
+
 /* Code-family files use code icon, then language-specific colors */
 .workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".js" i], [data-path$=".cjs" i], [data-path$=".mjs" i], [data-path$=".jsx" i], [data-path$=".ts" i], [data-path$=".tsx" i], [data-path$=".py" i], [data-path$=".lua" i], [data-path$=".rs" i], [data-path$=".go" i], [data-path$=".java" i], [data-path$=".kt" i], [data-path$=".kts" i], [data-path$=".rb" i], [data-path$=".php" i], [data-path$=".c" i], [data-path$=".h" i], [data-path$=".cpp" i], [data-path$=".cc" i], [data-path$=".cxx" i], [data-path$=".hpp" i], [data-path$=".hh" i], [data-path$=".hxx" i], [data-path$=".cs" i], [data-path$=".swift" i], [data-path$=".scala" i], [data-path$=".r" i], [data-path$=".sql" i], [data-path$=".css" i], [data-path$=".scss" i], [data-path$=".sass" i], [data-path$=".less" i], [data-path$=".html" i], [data-path$=".htm" i], [data-path$=".xml" i], [data-path$=".vue" i], [data-path$=".svelte" i], [data-path$=".json" i], [data-path$=".jsonc" i], [data-path$=".yaml" i], [data-path$=".yml" i], [data-path$=".toml" i], [data-path$=".ini" i], [data-path$=".conf" i], [data-path$=".env" i], [data-path$=".sh" i], [data-path$=".bash" i], [data-path$=".zsh" i], [data-path$=".fish" i]) {
     --srcery-filetype-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='m10 13-2 2 2 2'/%3E%3Cpath d='m14 17 2-2-2-2'/%3E%3C/svg%3E");
 }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".js" i], [data-path$=".cjs" i], [data-path$=".mjs" i], [data-path$=".jsx" i]) { --srcery-filetype-color: var(--srcery-yellow); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".py" i] { --srcery-filetype-color: var(--srcery-bright-yellow); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".lua" i] { --srcery-filetype-color: var(--srcery-blue); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".rs" i] { --srcery-filetype-color: var(--srcery-orange); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".ts" i], [data-path$=".tsx" i]) { --srcery-filetype-color: var(--srcery-bright-blue); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".go" i] { --srcery-filetype-color: var(--srcery-bright-cyan); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".java" i], [data-path$=".kt" i], [data-path$=".kts" i], [data-path$=".rb" i], [data-path$=".php" i]) { --srcery-filetype-color: var(--srcery-red); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".c" i], [data-path$=".h" i], [data-path$=".cpp" i], [data-path$=".cc" i], [data-path$=".cxx" i], [data-path$=".hpp" i], [data-path$=".hh" i], [data-path$=".hxx" i], [data-path$=".cs" i], [data-path$=".swift" i], [data-path$=".scala" i], [data-path$=".r" i], [data-path$=".sql" i]) { --srcery-filetype-color: var(--srcery-cyan); }
-.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".css" i], [data-path$=".scss" i], [data-path$=".sass" i], [data-path$=".less" i], [data-path$=".html" i], [data-path$=".htm" i], [data-path$=".xml" i], [data-path$=".vue" i], [data-path$=".svelte" i], [data-path$=".json" i], [data-path$=".jsonc" i], [data-path$=".yaml" i], [data-path$=".yml" i], [data-path$=".toml" i], [data-path$=".ini" i], [data-path$=".conf" i], [data-path$=".env" i], [data-path$=".sh" i], [data-path$=".bash" i], [data-path$=".zsh" i], [data-path$=".fish" i]) { --srcery-filetype-color: var(--srcery-bright-magenta); }
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".js" i], [data-path$=".cjs" i], [data-path$=".mjs" i], [data-path$=".jsx" i]) {
+    --srcery-filetype-color: var(--srcery-yellow);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".py" i] {
+    --srcery-filetype-color: var(--srcery-bright-yellow);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".lua" i] {
+    --srcery-filetype-color: var(--srcery-blue);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".rs" i] {
+    --srcery-filetype-color: var(--srcery-orange);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".ts" i], [data-path$=".tsx" i]) {
+    --srcery-filetype-color: var(--srcery-bright-blue);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title[data-path$=".go" i] {
+    --srcery-filetype-color: var(--srcery-bright-cyan);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".java" i], [data-path$=".kt" i], [data-path$=".kts" i], [data-path$=".rb" i], [data-path$=".php" i]) {
+    --srcery-filetype-color: var(--srcery-red);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".c" i], [data-path$=".h" i], [data-path$=".cpp" i], [data-path$=".cc" i], [data-path$=".cxx" i], [data-path$=".hpp" i], [data-path$=".hh" i], [data-path$=".hxx" i], [data-path$=".cs" i], [data-path$=".swift" i], [data-path$=".scala" i], [data-path$=".r" i], [data-path$=".sql" i]) {
+    --srcery-filetype-color: var(--srcery-cyan);
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-file-title:is([data-path$=".css" i], [data-path$=".scss" i], [data-path$=".sass" i], [data-path$=".less" i], [data-path$=".html" i], [data-path$=".htm" i], [data-path$=".xml" i], [data-path$=".vue" i], [data-path$=".svelte" i], [data-path$=".json" i], [data-path$=".jsonc" i], [data-path$=".yaml" i], [data-path$=".yml" i], [data-path$=".toml" i], [data-path$=".ini" i], [data-path$=".conf" i], [data-path$=".env" i], [data-path$=".sh" i], [data-path$=".bash" i], [data-path$=".zsh" i], [data-path$=".fish" i]) {
+    --srcery-filetype-color: var(--srcery-bright-magenta);
+}
 .workspace-leaf-content[data-type='file-explorer'] .nav-file-title .tree-item-icon,
 .workspace-leaf-content[data-type='file-explorer'] .nav-file-title .tree-item-icon svg,
 .workspace-leaf-content[data-type='file-explorer'] .nav-file-title .nav-file-title-content::before,
@@ -717,7 +773,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .bases-toolbar .bases-toolbar-item.bases-toolbar-new-item-menu .text-icon-button:is(:hover, .is-active),
 .bases-toolbar .bases-toolbar-item.bases-toolbar-new-item-menu .text-icon-button:is(:hover, .is-active) svg { color: var(--srcery-cyan); }
 
-/* Canvas Instruction box menu thing */
+/* Canvas accent variables (instruction overlay + selection accents) */
 .workspace-leaf-content[data-type='canvas'] {
     --color-accent: var(--srcery-green);
     --color-accent-rgb: 81, 159, 80;
