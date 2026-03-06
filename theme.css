@@ -459,6 +459,161 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .workspace-leaf-content[data-type='outline'] .nav-buttons-container > .nav-action-button:nth-child(3n+3):is(:hover, .is-active, .has-active-menu),
 .workspace-leaf-content[data-type='outline'] .nav-buttons-container > .nav-action-button:nth-child(3n+3):is(:hover, .is-active, .has-active-menu) svg { color: var(--srcery-green); }
 
+/* Right sidebar pane action buttons (All Properties pane) */
+.workspace-leaf-content[data-type='all-properties'] .nav-buttons-container > .nav-action-button:nth-child(2n+1):is(:hover, .is-active, .has-active-menu),
+.workspace-leaf-content[data-type='all-properties'] .nav-buttons-container > .nav-action-button:nth-child(2n+1):is(:hover, .is-active, .has-active-menu) svg,
+.workspace-leaf-content[data-type='properties'] .nav-buttons-container > .nav-action-button:nth-child(2n+1):is(:hover, .is-active, .has-active-menu),
+.workspace-leaf-content[data-type='properties'] .nav-buttons-container > .nav-action-button:nth-child(2n+1):is(:hover, .is-active, .has-active-menu) svg { color: var(--srcery-yellow); }
+.workspace-leaf-content[data-type='all-properties'] .nav-buttons-container > .nav-action-button:nth-child(2n+2):is(:hover, .is-active, .has-active-menu),
+.workspace-leaf-content[data-type='all-properties'] .nav-buttons-container > .nav-action-button:nth-child(2n+2):is(:hover, .is-active, .has-active-menu) svg,
+.workspace-leaf-content[data-type='properties'] .nav-buttons-container > .nav-action-button:nth-child(2n+2):is(:hover, .is-active, .has-active-menu),
+.workspace-leaf-content[data-type='properties'] .nav-buttons-container > .nav-action-button:nth-child(2n+2):is(:hover, .is-active, .has-active-menu) svg { color: var(--srcery-red); }
+
+/* All Properties pane tree visuals */
+.workspace-leaf-content[data-type='all-properties'] .tree-item-self .tree-item-flair,
+.workspace-leaf-content[data-type='all-properties'] .tree-item-self .tree-item-flair-outer,
+.workspace-leaf-content[data-type='properties'] .tree-item-self .tree-item-flair,
+.workspace-leaf-content[data-type='properties'] .tree-item-self .tree-item-flair-outer {
+    color: var(--srcery-orange);
+}
+
+/* All Properties icons use the standard 14-color cycle by row */
+.workspace-leaf-content[data-type='all-properties'] .tree-item,
+.workspace-leaf-content[data-type='properties'] .tree-item {
+    --srcery-properties-icon-color: var(--srcery-yellow);
+}
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+1),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+1) { --srcery-properties-icon-color: var(--srcery-yellow); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+2),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+2) { --srcery-properties-icon-color: var(--srcery-red); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+3),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+3) { --srcery-properties-icon-color: var(--srcery-green); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+4),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+4) { --srcery-properties-icon-color: var(--srcery-blue); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+5),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+5) { --srcery-properties-icon-color: var(--srcery-magenta); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+6),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+6) { --srcery-properties-icon-color: var(--srcery-cyan); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+7),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+7) { --srcery-properties-icon-color: var(--srcery-orange); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+8),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+8) { --srcery-properties-icon-color: var(--srcery-bright-yellow); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+9),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+9) { --srcery-properties-icon-color: var(--srcery-bright-red); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+10),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+10) { --srcery-properties-icon-color: var(--srcery-bright-green); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+11),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+11) { --srcery-properties-icon-color: var(--srcery-bright-blue); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+12),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+12) { --srcery-properties-icon-color: var(--srcery-bright-magenta); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+13),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+13) { --srcery-properties-icon-color: var(--srcery-bright-cyan); }
+.workspace-leaf-content[data-type='all-properties'] .tree-item:nth-child(14n+14),
+.workspace-leaf-content[data-type='properties'] .tree-item:nth-child(14n+14) { --srcery-properties-icon-color: var(--srcery-bright-orange); }
+
+.workspace-leaf-content[data-type='all-properties'] .tree-item-self .tree-item-icon:not(.collapse-icon),
+.workspace-leaf-content[data-type='properties'] .tree-item-self .tree-item-icon:not(.collapse-icon) {
+    color: var(--srcery-properties-icon-color);
+}
+
+/* All Properties collapsible groups use folder icon (replace default list icon) */
+.workspace-leaf-content[data-type='all-properties'] .tree-item-self.mod-collapsible .tree-item-icon:not(.collapse-icon),
+.workspace-leaf-content[data-type='properties'] .tree-item-self.mod-collapsible .tree-item-icon:not(.collapse-icon) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    color: var(--srcery-properties-icon-color);
+}
+
+.workspace-leaf-content[data-type='all-properties'] .tree-item-self.mod-collapsible .tree-item-icon:not(.collapse-icon) svg,
+.workspace-leaf-content[data-type='properties'] .tree-item-self.mod-collapsible .tree-item-icon:not(.collapse-icon) svg {
+    display: none;
+}
+
+.workspace-leaf-content[data-type='all-properties'] .tree-item-self.mod-collapsible .tree-item-icon:not(.collapse-icon)::before,
+.workspace-leaf-content[data-type='properties'] .tree-item-self.mod-collapsible .tree-item-icon:not(.collapse-icon)::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9l-.81-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9l-.81-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+/* Outline collapsible rows use the same folder icon/color as file explorer folders */
+.workspace-leaf-content[data-type='outline'] .tree-item-self .tree-item-icon.collapse-icon + .tree-item-inner,
+.workspace-leaf-content[data-type='outline'] .tree-item-self.mod-collapsible .tree-item-inner {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.workspace-leaf-content[data-type='outline'] .tree-item-self .tree-item-icon.collapse-icon + .tree-item-inner::before,
+.workspace-leaf-content[data-type='outline'] .tree-item-self.mod-collapsible .tree-item-inner::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    margin-top: 2px;
+    background-color: var(--srcery-bright-green);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9l-.81-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9l-.81-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+/* Tags pane tree row visuals */
+.workspace-leaf-content[data-type='tag'] .tree-item-self .tree-item-flair,
+.workspace-leaf-content[data-type='tag'] .tree-item-self .tree-item-flair-outer {
+    color: var(--srcery-orange);
+}
+
+.workspace-leaf-content[data-type='tag'] .tree-item-self .tree-item-inner {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+/* Collapsible tag groups use the same folder icon/color as file explorer folders */
+.workspace-leaf-content[data-type='tag'] .tree-item-self .tree-item-icon.collapse-icon + .tree-item-inner::before,
+.workspace-leaf-content[data-type='tag'] .tree-item-self.mod-collapsible .tree-item-inner::before {
+    background-color: var(--srcery-bright-green);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9l-.81-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9l-.81-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+}
+
+.workspace-leaf-content[data-type='tag'] .tree-item-self .tree-item-inner::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    margin-top: 2px;
+    background-color: var(--srcery-bright-blue);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='4' y1='9' x2='20' y2='9'/%3E%3Cline x1='4' y1='15' x2='20' y2='15'/%3E%3Cline x1='10' y1='3' x2='8' y2='21'/%3E%3Cline x1='16' y1='3' x2='14' y2='21'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='4' y1='9' x2='20' y2='9'/%3E%3Cline x1='4' y1='15' x2='20' y2='15'/%3E%3Cline x1='10' y1='3' x2='8' y2='21'/%3E%3Cline x1='16' y1='3' x2='14' y2='21'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
 /* Markdown note header action buttons */
 .workspace-leaf-content[data-type='markdown'] .view-actions > .view-action:nth-child(3n+1):is(:hover, .is-active, .has-active-menu),
 .workspace-leaf-content[data-type='markdown'] .view-actions > .view-action:nth-child(3n+1):is(:hover, .is-active, .has-active-menu) svg { color: var(--srcery-yellow); }
