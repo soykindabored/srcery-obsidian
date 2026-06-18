@@ -52,6 +52,8 @@
 
 3. In Obsidian, go to **Settings → Appearance → Themes** and select **Srcery**.
 
+4. Obsidian Community [Link](https://community.obsidian.md/themes/srcery) 
+
 ## Palette
 
 All colors sourced from the official [srcery-palette](https://www.npmjs.com/package/@srcery-colors/srcery-palette).
