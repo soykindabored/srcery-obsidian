@@ -1,7 +1,7 @@
 {
 	"name": "Srcery",
-	"version": "0.1.3",
-	"minAppVersion": "1.1.9",
+	"version": "0.1.4",
+	"minAppVersion": "1.5.12",
 	"author": "kindabored",
 	"authorUrl": "https://github.com/soykindabored/"
 }
