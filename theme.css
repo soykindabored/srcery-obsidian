@@ -60,6 +60,11 @@ body {
     /* Typography */
     --font-monospace: "Hack Nerd Font", "Source Code Pro", monospace;
     -webkit-font-smoothing: auto;
+
+    /* Default accent — Srcery dim-green (#2E5C2E); user-overridable in Settings → Appearance */
+    --accent-h: 119;
+    --accent-s: 33%;
+    --accent-l: 27%;
 }
 
 /* ================================================================
