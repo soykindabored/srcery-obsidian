@@ -367,7 +367,7 @@ input.task-list-item-checkbox:checked {
 
 .markdown-rendered .callout,
 .markdown-source-view.mod-cm6 .callout {
-    --callout-color: 81, 159, 80;
+    --callout-color: rgb(81, 159, 80);
     --callout-border-width: 1px;
     --callout-border-opacity: 1;
     background-color: var(--srcery-black);
