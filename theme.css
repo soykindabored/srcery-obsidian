@@ -221,12 +221,12 @@ body {
     --callout-quote:   var(--srcery-white);
 
     /* Canvas preset colors */
-    --canvas-color-1: 239, 47, 39;
-    --canvas-color-2: 255, 95, 0;
-    --canvas-color-3: 251, 184, 41;
-    --canvas-color-4: 81, 159, 80;
-    --canvas-color-5: 44, 120, 191;
-    --canvas-color-6: 224, 44, 109;
+    --canvas-color-1: var(--srcery-red);
+    --canvas-color-2: var(--srcery-orange);
+    --canvas-color-3: var(--srcery-yellow);
+    --canvas-color-4: var(--srcery-green);
+    --canvas-color-5: var(--srcery-blue);
+    --canvas-color-6: var(--srcery-magenta);
 }
 
 /* ================================================================
